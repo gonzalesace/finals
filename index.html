@@ -3,104 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Information Form</title>
+    <title>HTML Form</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
+        * {
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
-
         table {
-            border-collapse: separate;
-            border-spacing: 0;
-            background-color: #ffffff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 500px;
+            border-collapse: collapse;
+            background-color: #d4d0c8;
+            border: 2px solid #999;
         }
-
         th {
-            background-color: #2c3e50;
-            color: #ffffff;
-            padding: 20px;
+            background-color: #b0c4de;
+            border: 1px solid #999;
+            padding: 6px 12px;
             text-align: center;
-            font-size: 18px;
-            letter-spacing: 0.5px;
-        }
-
-        td {
-            padding: 15px 25px;
-            border-bottom: 1px solid #edf2f7;
-            font-size: 15px;
-            color: #4a5568;
-        }
-
-        td:first-child {
-            background-color: #f8fafc;
-            font-weight: 600;
-            width: 35%;
-        }
-
-        input[type="text"], 
-        select, 
-        textarea {
-            width: 100%;
-            border: 1px solid #cbd5e0;
-            border-radius: 6px;
-            padding: 10px;
-            box-sizing: border-box;
             font-size: 14px;
-            outline: none;
         }
-
-        input[type="text"]:focus, 
-        select:focus, 
-        textarea:focus {
-            border-color: #3498db;
-            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        td {
+            border: 1px solid #999;
+            padding: 6px 12px;
+            font-size: 14px;
+            vertical-align: middle;
         }
-
-        .radio-group, .checkbox-group {
-            line-height: 1.8;
+        td:first-child {
+            background-color: #d4d0c8;
+            width: 40%;
         }
-
-        tr td.describe-td {
-            background-color: #ffffff;
+        td:last-child {
+            background-color: white;
         }
-
-        tr td.btn-td {
+        input[type="text"] {
+            width: 95%;
+            border: 1px solid #999;
+            padding: 2px 4px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        select {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        textarea {
+            width: 95%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border: 1px solid #999;
+            resize: vertical;
+        }
+        .describe-td {
+            background-color: white !important;
+            padding: 4px 8px;
+        }
+        .btn-td {
             text-align: center;
-            background-color: #f8fafc;
-            padding: 25px;
+            background-color: #d4d0c8 !important;
         }
-
         input[type="submit"] {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 6px;
+            background-color: #d4d0c8;
+            border: 1px solid #999;
+            padding: 4px 16px;
             cursor: pointer;
-            font-weight: 600;
-            font-size: 15px;
-            transition: background 0.2s;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
-
         input[type="submit"]:hover {
-            background-color: #2980b9;
-        }
-
-        input[type="radio"], input[type="checkbox"] {
-            margin-right: 10px;
-            transform: scale(1.1);
-            cursor: pointer;
+            background-color: #b0c4de;
         }
     </style>
 </head>
@@ -108,56 +72,53 @@
 
     <form action="thankyou.html" method="post">
         <table>
-            <thead>
-                <tr>
-                    <th colspan="2">Registration Form</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><label for="name">Name</label></td>
-                    <td><input type="text" id="name" name="name" required></td>
-                </tr>
-                <tr>
-                    <td>Sex</td>
-                    <td class="radio-group">
-                        <input type="radio" id="male" name="sex" value="male">
-                        <label for="male">Male</label><br>
-                        <input type="radio" id="female" name="sex" value="female">
-                        <label for="female">Female</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="eyecolor">Eye color</label></td>
-                    <td>
-                        <select name="eyecolor" id="eyecolor">
-                            <option value="brown">Brown</option>
-                            <option value="blue">Blue</option>
-                            <option value="green" selected>Green</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Attributes</td>
-                    <td class="checkbox-group">
-                        <input type="checkbox" id="tall" name="tall" value="tall">
-                        <label for="tall">Over 6 feet tall</label><br>
-                        <input type="checkbox" id="heavy" name="heavy" value="heavy">
-                        <label for="heavy">Over 200 pounds</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="describe-td">
-                        <label for="athletic"><strong>Athletic Description:</strong></label>
-                        <textarea id="athletic" name="athletic" rows="4" style="margin-top: 10px;"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="btn-td">
-                        <input type="submit" value="Submit Information">
-                    </td>
-                </tr>
-            </tbody>
+            <tr>
+                <th>Name</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" id="name" name="name"></td>
+            </tr>
+            <tr>
+                <td>Sex</td>
+                <td>
+                    <input type="radio" id="male" name="sex" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="sex" value="female" checked>
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="eyecolor">Eye color</label></td>
+                <td>
+                    <select name="eyecolor" id="eyecolor">
+                        <option value="green" selected>green</option>
+                        <option value="blue">blue</option>
+                        <option value="brown">brown</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Check all that apply</td>
+                <td>
+                    <input type="checkbox" id="tall" name="tall" value="tall">
+                    <label for="tall">Over 6 feet tall</label><br>
+                    <input type="checkbox" id="heavy" name="heavy" value="heavy">
+                    <label for="heavy">Over 200 pounds</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="describe-td">
+                    <label for="athletic">Describe your athletic ability:</label><br>
+                    <textarea id="athletic" name="athletic" rows="4" cols="50"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="btn-td">
+                    <input type="submit" value="Enter my information">
+                </td>
+            </tr>
         </table>
     </form>
 
