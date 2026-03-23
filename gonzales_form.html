@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <style>
+        * {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        table {
+            border-collapse: collapse;
+            background-color: #d4d0c8;
+            border: 2px solid #999;
+        }
+        th {
+            background-color: #b0c4de;
+            border: 1px solid #999;
+            padding: 6px 12px;
+            text-align: center;
+            font-size: 14px;
+        }
+        td {
+            border: 1px solid #999;
+            padding: 6px 12px;
+            font-size: 14px;
+            vertical-align: middle;
+        }
+        td:first-child {
+            background-color: #d4d0c8;
+            width: 40%;
+        }
+        td:last-child {
+            background-color: white;
+        }
+        input[type="text"] {
+            width: 95%;
+            border: 1px solid #999;
+            padding: 2px 4px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        select {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        textarea {
+            width: 95%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border: 1px solid #999;
+            resize: vertical;
+        }
+        .describe-td {
+            background-color: white !important;
+            padding: 4px 8px;
+        }
+        .btn-td {
+            text-align: center;
+            background-color: #d4d0c8 !important;
+        }
+        input[type="submit"] {
+            background-color: #d4d0c8;
+            border: 1px solid #999;
+            padding: 4px 16px;
+            cursor: pointer;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        input[type="submit"]:hover {
+            background-color: #b0c4de;
+        }
+    </style>
+</head>
+<body>
 
+    <form action="thankyou.html" method="get">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" id="name" name="name"></td>
+            </tr>
+            <tr>
+                <td>Sex</td>
+                <td>
+                    <input type="radio" id="male" name="sex" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="sex" value="female" checked>
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="eyecolor">Eye color</label></td>
+                <td>
+                    <select name="eyecolor" id="eyecolor">
+                        <option value="green" selected>green</option>
+                        <option value="blue">blue</option>
+                        <option value="brown">brown</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Check all that apply</td>
+                <td>
+                    <input type="checkbox" id="tall" name="tall" value="tall">
+                    <label for="tall">Over 6 feet tall</label><br>
+                    <input type="checkbox" id="heavy" name="heavy" value="heavy">
+                    <label for="heavy">Over 200 pounds</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="describe-td">
+                    <label for="athletic">Describe your athletic ability:</label><br>
+                    <textarea id="athletic" name="athletic" rows="4" cols="50"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="btn-td">
+                    <input type="submit" value="Enter my information">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
